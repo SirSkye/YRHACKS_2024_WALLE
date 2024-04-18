@@ -30,3 +30,8 @@ async def give_home_html(request: Request):
 async def give_test_htmp(request: Request):
     context = {"request": request}
     return templates.TemplateResponse(request=context, name="test.html")
+
+@client.get("/loggedIn")
+async def give_logginIn(request: Request):
+    context = {"request", request}
+    return templates.TemplateResponse()
